@@ -2,6 +2,10 @@
   "name": "tivyo",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@12.4.2",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  },
   "description": "A cross-platform, AI-assisted planning PWA that turns schedules, priorities, and personal knowledge into actionable daily plans.",
   "workspaces": [
     "apps/*",
@@ -10,6 +14,7 @@
   "scripts": {
     "dev:web": "pnpm --filter @tivyo/web dev",
     "dev:api": "pnpm --filter @tivyo/api dev",
+    "build": "pnpm -r build",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
   }
