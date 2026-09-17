@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Tivyo temporary application icon</title>
+  <desc id="desc">A temporary technical icon used during the PWA foundation phase.</desc>
+  <rect width="512" height="512" rx="112" fill="#0f172a"/>
+  <path d="M128 142h256v62H287v166h-62V204h-97z" fill="#f8fafc"/>
+</svg>
