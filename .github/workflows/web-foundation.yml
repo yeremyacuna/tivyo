@@ -1,6 +1,7 @@
 name: Web Foundation
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
