@@ -1,18 +1,35 @@
 <!doctype html>
+
+<!-- Main HTML document. English is the primary language of the Tivyo UI. -->
 <html lang="en">
   <head>
+    <!-- Use UTF-8 so the application can display international characters correctly. -->
     <meta charset="UTF-8" />
+
+    <!-- Make the layout use the real device width on phones, tablets, and desktops. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser/PWA theme color. This value is temporary until the final UI identity is defined. -->
     <meta name="theme-color" content="#0f172a" />
+
+    <!-- Short description used as metadata for the Tivyo web application. -->
     <meta
       name="description"
       content="Tivyo turns schedules, priorities, and personal knowledge into an actionable daily plan."
     />
+
+    <!-- Temporary application icon. It will be replaced by the official Tivyo branding later. -->
     <link rel="icon" type="image/svg+xml" href="/tivyo-icon.svg" />
+
+    <!-- Default browser tab title. -->
     <title>Tivyo</title>
   </head>
+
   <body>
+    <!-- React mounts the complete application inside this element. -->
     <div id="root"></div>
+
+    <!-- Vite loads the React/TypeScript application from this entry file. -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
