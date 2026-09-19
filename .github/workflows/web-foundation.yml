@@ -1,5 +1,6 @@
 name: Web Foundation
 
+# Run automatically for relevant branches and allow manual validation from GitHub Actions.
 on:
   workflow_dispatch:
   push:
@@ -12,6 +13,7 @@ on:
       - main
       - develop
 
+# The validation job only needs read access to repository contents.
 permissions:
   contents: read
 
@@ -35,9 +37,11 @@ jobs:
         with:
           node-version: 22.16.0
 
+      # Allow dependency installation before the project lockfile is committed.
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      # Reject type errors before validating the production build.
       - name: Typecheck
         run: pnpm typecheck
 
