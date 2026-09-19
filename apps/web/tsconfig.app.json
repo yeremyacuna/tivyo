@@ -1,5 +1,8 @@
 {
+  // Reuse the shared TypeScript rules defined for the whole monorepo.
   "extends": "../../tsconfig.base.json",
+
+  // Configure TypeScript for React code that runs in the browser.
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
@@ -8,9 +11,14 @@
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
+
+    // Vite generates the final build, so TypeScript only performs type checking here.
     "noEmit": true,
+
     "jsx": "react-jsx",
     "types": ["vite/client", "vite-plugin-pwa/client"]
   },
+
+  // Apply this configuration only to the frontend source directory.
   "include": ["src"]
 }
