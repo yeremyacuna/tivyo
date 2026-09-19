@@ -1,3 +1,5 @@
+// Temporary data used to verify that React can render repeated UI elements.
+// These items describe the technologies included in the current web foundation.
 const foundationItems = [
   'React + TypeScript application shell',
   'Vite development and production build pipeline',
@@ -5,9 +7,12 @@ const foundationItems = [
   'Installable PWA manifest and service worker',
 ] as const
 
+// Root UI component of the Tivyo React application.
+// main.tsx renders this component inside the HTML #root element.
 export function App() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      {/* Temporary foundation screen used before the final Tivyo UI system is designed. */}
       <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-16 sm:px-10">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
           Tivyo · Foundation
@@ -22,6 +27,7 @@ export function App() {
           screen is intentionally minimal while the product UI system is still being defined.
         </p>
 
+        {/* Render one temporary card for each foundation item. */}
         <div className="mt-10 grid gap-3 sm:grid-cols-2">
           {foundationItems.map((item) => (
             <div key={item} className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
@@ -30,7 +36,7 @@ export function App() {
           ))}
         </div>
 
-        <p className="mt-10 text-sm text-slate-500">Day 1 · Foundation &amp; Core</p>
+        <p className="mt-10 text-sm text-slate-500">Day 1 · Foundation & Core</p>
       </section>
     </main>
   )
