@@ -1,5 +1,8 @@
 {
+  // This root config does not compile source files directly.
   "files": [],
+
+  // Delegate TypeScript checking to the browser app and Node tooling configs.
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
