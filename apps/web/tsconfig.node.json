@@ -1,12 +1,21 @@
 {
+  // Reuse the shared TypeScript rules defined for the whole monorepo.
   "extends": "../../tsconfig.base.json",
+
+  // Configure TypeScript for Vite and other Node-based tooling.
   "compilerOptions": {
     "target": "ES2023",
     "lib": ["ES2023"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+
+    // Vite handles the build output, so TypeScript only checks types here.
     "noEmit": true,
+
+    // Provide TypeScript definitions for the Node.js environment.
     "types": ["node"]
   },
+
+  // Apply this configuration only to the Vite configuration file.
   "include": ["vite.config.ts"]
 }
